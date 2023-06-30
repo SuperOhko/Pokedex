@@ -6,7 +6,7 @@ import { Pokemon } from '@/@types/pokemon';
 import PokemonList from '@/components/PokemonList';
 
 async function getPokemons() {
-  const res = await fetch('https://api-pokemon-fr.vercel.app/api/v1/pokemon');
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/pokemon`);
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
